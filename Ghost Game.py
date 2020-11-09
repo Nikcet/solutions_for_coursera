@@ -1,25 +1,24 @@
-# Ghost Game
 from random import randint
 
 print('Ghost Game')
-feeling_brave = True
+brave = True
 score = 0
 
-while feeling_brave:
+while brave == True:
     ghost_door = randint(1, 3)
-    print('Three doors ahead...')
-    print('A ghost behind one.')
-    print('which door do you open?')
-    door = input('1, 2 or 3?')
+    print('Перед тобой три двери...')
+    print('За одной из них призрак.')
+    print('Какую дверь ты откроешь?')
+    door = input('1, 2 или 3? ')
     door_num = int(door)
 
     if door_num == ghost_door:
-        print('GHOST!')
-        feeling_brave = False
+        print('ПРИЗРАК!')
+        brave = False   
     else:
-        print('No ghost!')
-        print('You enter the next room.')
+        print('Фух, никого')
+        print('Ты заходишь в следующую комнату...')
         score = score + 1
 
-print('Run away!')
-print('Game over! You scored', score)
+print('О нет! ТИКАЙ ОТСЮДА, ГЛУПЕЦ!')
+print('Ты проиграл! Твой счет:', score)
